@@ -1,0 +1,11 @@
+.lunchData{
+    width:31%;
+    float:left;
+    margin:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    border-radius:5px;
+    align-items: center;
+    box-shadow:5px 5px 10px lightgray, -5px -5px 10px lightgray ;
+}
