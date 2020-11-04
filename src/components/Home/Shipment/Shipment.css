@@ -1,0 +1,9 @@
+.shipment a:hover{
+    text-decoration: none;
+}
+.shipment{
+    background-image: url('../../../images/bannerbackground.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

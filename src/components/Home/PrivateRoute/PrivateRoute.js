@@ -1,24 +1,27 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, { useState } from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { UserContextName } from '../../../App';
 
-const PrivateRoute = ({children, ...rest}) => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContextName)
+const PrivateRoute = ({ children, ...rest }) => {
+    const userLogin = JSON.parse(localStorage.getItem('userLogin'));
+
+    const [test, setTest] = useState({
+        isLogin: true,
+    })
     return (
         <Route
             {...rest}
-            render={({ location }) =>
-            loggedInUser.email ? (
-                    children
-                ) : (
-                        <Redirect
-                            to={{
-                                pathname: "/signup",
-                                state: { from: location }
-                            }}
-                        />
-                    )
+            render={
+                ({ location }) =>
+                    (userLogin.email || (test.isLogin && userLogin.name)) ? (
+                        children
+                    ) : (
+                            <Redirect
+                                to={{
+                                    pathname: "/signup",
+                                    state: { from: location }
+                                }}
+                            />
+                        )
             }
         />
     );

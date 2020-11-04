@@ -1,0 +1,11 @@
+.footer{
+    margin-top: 100px;
+    background: black;
+    color: white;
+}
+.footer ul li a{
+    color: white;
+}
+.footer ul li{
+    list-style-type: none;
+}

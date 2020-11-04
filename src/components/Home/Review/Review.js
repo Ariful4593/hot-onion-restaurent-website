@@ -6,8 +6,6 @@ import ReviewData from './ReviewData';
 import foodData from '../../../foodData/foodData'
 
 const Review = () => {
-    // const cart = props.cart;
-    // console.log(cart)
     const [reviewcart, setReviewCart] = useState([]);
     const handleRemoveProduct = (productKey) =>{
         console.log("Clicked Removed",productKey);

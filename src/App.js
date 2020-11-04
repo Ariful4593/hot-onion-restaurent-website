@@ -5,19 +5,20 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Review from './components/Home/Review/Review';
 import { useState } from 'react';
 import { addToDatabaseCart } from './utilities/databaseManager';
-import Signup from './components/Home/Body/Signup/Signup';
 import { createContext } from 'react';
 import PrivateRoute from './components/Home/PrivateRoute/PrivateRoute';
 import Shipment from './components/Home/Shipment/Shipment';
+import Signup from './components/Home/Signup/Signup';
+import Order from './components/Home/Order/Order';
 export const UserContextName = createContext()
 
 function App() {
   const [cart, setCart] = useState([])
+  
   const handleFood = (food) => {
     console.log("Product Added", food);
     const newCart = [...cart, food];
@@ -47,6 +48,9 @@ function App() {
           <PrivateRoute path="/shipment">
             <Shipment></Shipment>
           </PrivateRoute>
+          <Route path="/order">
+            <Order></Order>
+          </Route>
         </Switch>
       </Router>
 

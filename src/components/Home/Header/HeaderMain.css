@@ -1,0 +1,24 @@
+.main-header{
+    background-image: url('../../../images/bannerbackground.png');
+    background-repeat: no-repeat;
+    height: 450px;
+    width: 100%;
+    text-align: center;
+    background-size: cover;
+}
+@media screen and (max-width: 300px) {
+    .container h1 {
+      font-size: 20px;
+    }
+  }
+  @media screen and (min-width: 301px) {
+    .container h1 {
+      font-size: 30px;
+    }
+  }
+  @media screen and (min-width: 472px) {
+    .container h1 {
+      font-size: 34px;
+    }
+  }
+  

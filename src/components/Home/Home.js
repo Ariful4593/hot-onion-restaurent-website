@@ -1,16 +1,18 @@
 import React from 'react';
+import Choose from './Choose/Choose';
 
-import Body from './Body/Body';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
-
+import Menu from './Menu/Menu';
 const Home = (props) => {
     
     return (
         <div>
             <Header cart={props.cart}></Header>
-            <Body handleFood={props.handleFood} ></Body>
+            <Menu></Menu>
+            <Choose></Choose>
             <Footer></Footer>
+            
         </div>
     );
 };
