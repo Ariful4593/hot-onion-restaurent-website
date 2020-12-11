@@ -11,14 +11,14 @@ import { Col, Row } from 'react-bootstrap';
 import { UserContextName } from '../../../App';
 const Signup = () => {
     const firebaseConfig = {
-        apiKey: "AIzaSyBI2epogcUgl96MpeM_K6RnWSwCDJVQVho",
-        authDomain: "travel-guru-web.firebaseapp.com",
-        databaseURL: "https://travel-guru-web.firebaseio.com",
-        projectId: "travel-guru-web",
-        storageBucket: "travel-guru-web.appspot.com",
-        messagingSenderId: "375087887351",
-        appId: "1:375087887351:web:ea8ab298d9bca9668534f2"
-    };
+        apiKey: "AIzaSyDJbHfnRq5Wz9JwI8RGAu2NE4iwoqxfVW0",
+        authDomain: "red-onion-foodss.firebaseapp.com",
+        databaseURL: "https://red-onion-foodss.firebaseio.com",
+        projectId: "red-onion-foodss",
+        storageBucket: "red-onion-foodss.appspot.com",
+        messagingSenderId: "1028516743965",
+        appId: "1:1028516743965:web:8b663b01815dd40b706ff4"
+      };
     if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
     }
@@ -98,10 +98,9 @@ const Signup = () => {
                 }
                 setUser(userInfor)
                 
-                sessionStorage.setItem('googleUser', JSON.stringify(userInfor))
+                localStorage.setItem('userLogin', JSON.stringify(userInfor))
                 setLoggedInUser(userInfor)
                 history.replace(from)
-                console.log(displayName, email)
             })
             .catch(error => {
                 var errorMessage = error.message;

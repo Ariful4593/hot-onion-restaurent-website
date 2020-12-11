@@ -20,11 +20,12 @@ const Order = () => {
     const key = Object.keys(getData);
     const onSubmit = data => {
         if (data && cart && card) {
-            fetch('http://localhost:4000/addOrder', {
+            fetch('https://infinite-shore-12530.herokuapp.com/addOrder', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ data, cart, card })
             })
+            document.getElementById('orderForm').reset()
             alert("Your order submitted!")
         }else{
             alert("Please fill up all field")
@@ -60,7 +61,7 @@ const Order = () => {
             <Container>
                 <Row>
                     <Col className="col-sm-12 col-md-6 col-lg-5 col-12">
-                        <form onSubmit={handleSubmit(onSubmit)} className="ship-form">
+                        <form id="orderForm" onSubmit={handleSubmit(onSubmit)} className="ship-form">
                             {/* <input name="example" defaultValue="test" ref={register} /> */}
                             <input name="name" defaultValue={loggedInUser.name} ref={register({ required: true })} placeholder="Your Name" />
                             {errors.name && <span className="error">Name is required</span>}

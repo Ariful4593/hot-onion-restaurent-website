@@ -36,7 +36,6 @@ const SimpleCardForm = ({cardData}) => {
       setSuccessMessage(paymentMethod.id);
       seterrorMessage(null);
       cardData(paymentMethod)
-      console.log(paymentMethod)
     }
   };
 

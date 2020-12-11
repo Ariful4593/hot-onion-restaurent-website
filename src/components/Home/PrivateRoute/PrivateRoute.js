@@ -3,7 +3,6 @@ import { Redirect, Route } from 'react-router-dom';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const userLogin = JSON.parse(localStorage.getItem('userLogin'));
-
     const [test, setTest] = useState({
         isLogin: true,
     })
@@ -12,7 +11,7 @@ const PrivateRoute = ({ children, ...rest }) => {
             {...rest}
             render={
                 ({ location }) =>
-                    (userLogin.email || (test.isLogin && userLogin.name)) ? (
+                    (userLogin.email || (test.isLogin && userLogin.name) ) ? (
                         children
                     ) : (
                             <Redirect
