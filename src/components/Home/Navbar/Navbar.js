@@ -13,7 +13,7 @@ const Navbar = () => {
             setSignIn(newData)
         }
 
-    }, [])
+    }, [getData, signIn])
     return (
         <nav className="navbar navbar-expand-lg navbar-light " style={{ background: '#fff',}}>
             <Link to="/" className="navbar-brand h1 logo">

@@ -1,6 +1,5 @@
 import React from 'react';
 import Choose from './Choose/Choose';
-
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import Menu from './Menu/Menu';

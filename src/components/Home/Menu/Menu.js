@@ -7,6 +7,7 @@ import MenuBar from './MenuBar/MenuBar';
 import SubMenu from './SubMenu/SubMenu';
 
 const Menu = () => {
+    // eslint-disable-next-line no-unused-vars
     const [fullMenu, setFullmenu] = useState([]);
     const [currentMenu, setCurrentMenu] = useState([]);
     const [currentItem, setCurrentItem] = useState(null);
@@ -37,7 +38,6 @@ const Menu = () => {
     const handleCart = (item) => {
         const newCart = [...cart, item];
         setCart(newCart)
-        // sessionStorage.setItem('mycat', JSON.stringify(newCart));
         addToDatabaseCart(item.id, item.counter)
         setCurrentItem(null)
     }

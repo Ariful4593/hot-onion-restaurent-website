@@ -34,7 +34,7 @@ const Signup = () => {
         privateName: '',
     })
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContextName)
+    const [, setLoggedInUser] = useContext(UserContextName)
 
     const history = useHistory();
     const location = useLocation();
@@ -230,21 +230,21 @@ const Signup = () => {
                                         <label htmlFor="remember">Remember Me</label>
                                     </Col>
                                     <Col className="text-right">
-                                        <a href="" onClick={() => resetPassword(user.email)} >Forget Password?</a>
+                                        <a href="/" rel="noreferrer" onClick={() => resetPassword(user.email)} >Forget Password?</a>
                                     </Col>
                                 </Row>
 
 
                             </div>
                             <input type="submit" style={{ width: '100%' }} className="btn btn-danger" value={newUser ? 'Create an account' : 'Login'} />
-                            <p className="text-center">
+                            <h6 className="text-center">
                                 {
 
                                     newUser ? <p>Already have an account?<span style={{ cursor: 'pointer' }} className="text-warning" onClick={() => setNewUser(!newUser)}> Login</span></p> :
                                         <p>Don't have account?<span style={{ cursor: 'pointer' }} className="text-warning" onClick={() => setNewUser(!newUser)}> Create account</span></p>
 
                                 }
-                            </p>
+                            </h6>
                         </form>
                         <br />
                         {

@@ -39,7 +39,7 @@ const Order = () => {
             return food;
         })
         setCart(selectedOrder)
-    }, [])
+    }, [getData, key])
 
     const loggedInUser = JSON.parse(localStorage.getItem('userLogin'));
 

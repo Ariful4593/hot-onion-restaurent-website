@@ -3,6 +3,7 @@ import { Redirect, Route } from 'react-router-dom';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const userLogin = JSON.parse(localStorage.getItem('userLogin'));
+    // eslint-disable-next-line no-unused-vars
     const [test, setTest] = useState({
         isLogin: true,
     })
